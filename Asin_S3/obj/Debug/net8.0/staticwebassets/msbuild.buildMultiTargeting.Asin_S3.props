@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Asin_S3.props" />
+</Project>

@@ -1,0 +1,6 @@
+@Asin_S3_HostAddress = http://localhost:5181
+
+GET {{Asin_S3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
