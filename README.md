@@ -2,6 +2,15 @@
 
 Esta es una API REST desarrollada en **.NET 8** con **Entity Framework Core** y **Swagger**, que permite gestionar productos mediante operaciones CRUD.
 
+## 📥 Requisitos Previos
+
+Antes de instalar y ejecutar la API, asegúrate de tener lo siguiente:
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [Visual Studio](https://visualstudio.microsoft.com/) o [VS Code](https://code.visualstudio.com/)
+- [Postman](https://www.postman.com/) o cualquier herramienta para probar APIs
+
 ## 📂 Jerarquía de Carpetas
 ```
 Asin_S3
@@ -29,15 +38,6 @@ Asin_S3
 │─🗎 Program.cs
 ```
 
-## 📥 Requisitos Previos
-
-Antes de instalar y ejecutar la API, asegúrate de tener lo siguiente:
-
-- [.NET 8 SDK](https://dotnet.microsoft.com/download)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [Visual Studio](https://visualstudio.microsoft.com/) o [VS Code](https://code.visualstudio.com/)
-- [Postman](https://www.postman.com/) o cualquier herramienta para probar APIs
-
 ## 🚀 Instalación y Configuración
 
 ### 1️⃣ Clonar el repositorio
@@ -55,7 +55,7 @@ dotnet restore
 Edita el archivo **appsettings.json** y reemplaza `YourConnectionStringHere` por la conexión a tu base de datos SQL Server.
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "YourConnectionStringHere"
+  "DefaultConnection": "Server=ServidorSQL;Database=NombreBasedeDatos;Trusted_Connection=True;TrustServerCertificate=True;"
 }
 ```
 
@@ -71,6 +71,7 @@ dotnet ef database update
 dotnet run
 ```
 Por defecto, la API correrá en `http://localhost:5000` o `https://localhost:5001`.
+En mi maquina fue el `https://localhost:7243/)`
 
 ## 📖 Documentación con Swagger
 Una vez que la API esté en ejecución, puedes acceder a Swagger para ver y probar los endpoints:
